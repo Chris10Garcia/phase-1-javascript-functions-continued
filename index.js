@@ -9,7 +9,14 @@ function saturdayFun(activity = "roller-skate"){
 const mondayWork = function (activity = "go to the office"){
     return `This Monday, I will ${activity}.`
 }
-
 mondayWork(activity)
 
+
 // wrapAdjective test
+function wrapAdjective(wrapper = "*"){
+    return function(inner="special"){
+        return `You are ${wrapper}${inner}${wrapper}!`
+    }
+}
+
+console.log(wrapAdjective("%")("a dedicated programmer"))
